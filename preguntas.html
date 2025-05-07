@@ -1,0 +1,85 @@
+<!-- SECCIÓN 8: Preguntas Frecuentes (FAQ) -->
+<section id="faq" style="padding: 40px 20px; background-color: #f9f9f9; font-family: 'Roboto', sans-serif;">
+    <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Preguntas Frecuentes</h2>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <button id="toggleFaq" onclick="toggleFaq()" style="padding: 10px 20px; font-size: 16px; border: none; background-color: #8e44ad; color: white; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
+        Ver respuestas
+      </button>
+    </div>
+    <div id="faqContainer" style="display: none; max-width: 800px; margin: auto;">
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">¿Qué es Adopta un Sabio?</div>
+        <div class="answer">Es un proyecto social que conecta a personas sabias con jóvenes que buscan orientación, inspiración o conocimientos prácticos de vida.</div>
+      </div>
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">¿Quién puede ser considerado un “sabio”?</div>
+        <div class="answer">Cualquier adulto mayor con experiencia valiosa, principios sólidos y disposición para compartir sus aprendizajes con respeto y empatía.</div>
+      </div>
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">¿Tiene algún costo recibir orientación?</div>
+        <div class="answer">No. El proyecto busca fomentar la solidaridad intergeneracional sin fines de lucro. Todo el acompañamiento es gratuito.</div>
+      </div>
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">¿Cómo me comunico con un sabio?</div>
+        <div class="answer">En la Galería de Sabios puedes ver su perfil, área de conocimiento y un formulario para contactarlos directamente por WhatsApp.</div>
+      </div>
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">¿Qué tipo de temas se pueden consultar?</div>
+        <div class="answer">Desde dudas personales o vocacionales hasta consejos prácticos sobre vida, familia, trabajo o convivencia social. ¡Los sabios tienen mucho que compartir!</div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .faq-item {
+      background-color: #fff;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .question {
+      background-color: #f4e1f7; /* color pastel lavanda */
+      padding: 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+    }
+  
+    .faq-item:hover .question {
+      background-color: #ecd6f5; /* tono más claro al pasar */
+    }
+  
+    .answer {
+      display: none;
+      padding: 15px;
+      font-size: 0.95em;
+      color: #333;
+      background-color: #ffffff;
+    }
+  </style>
+  
+  <script>
+    function toggleFaq() {
+      const faq = document.getElementById('faqContainer');
+      const button = document.getElementById('toggleFaq');
+      if (faq.style.display === "none") {
+        faq.style.display = "block";
+        button.textContent = "Cerrar";
+        button.style.backgroundColor = "#c0392b";
+      } else {
+        faq.style.display = "none";
+        button.textContent = "Ver respuestas";
+        button.style.backgroundColor = "#8e44ad";
+      }
+    }
+  
+    function toggleAnswer(element) {
+      const answer = element.querySelector('.answer');
+      answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+  
